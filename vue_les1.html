@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/vue.js"></script>
+    </head>
+    <body>
+    <div id="app">
+      {{ message | capitalize}}
+    </div>
+      <script>
+      new Vue({
+        el: '#app',
+        data: {
+          message: 'abc'
+        }
+      })
+      </script>
+    </body>
+</html>
