@@ -6,15 +6,15 @@
     </head>
     <body>
     <div id="app">
-      {{ message | capitalize}}
+    <p v-if="greeting">Hello!</p>
     </div>
       <script>
-      new Vue({
-        el: '#app',
-        data: {
-          message: 'abc'
+      var exampleVM2 = new Vue({
+        el:'#app',
+        data:{
+          greeting:true
         }
-      })
+      });
       </script>
     </body>
 </html>
