@@ -5,16 +5,25 @@
         <script src="js/vue.js"></script>
     </head>
     <body>
-    <div id="app">
-    <p v-if="greeting">Hello!</p>
-    </div>
+    <ul id="example-2">
+    <template v-for="item in items">
+      <li>{{ item.message }}</li>
+      <li class="divider"></li>
+    </template>
+    </ul>
       <script>
-      var exampleVM2 = new Vue({
-        el:'#app',
-        data:{
-          greeting:true
+      var example2 = new Vue({
+        el:'#example-2',
+        data: {
+           parentMessage:'Parent',
+           items: [
+             {message: 'Foo'},
+             {message: 'Bar'}
+           ]
         }
       });
+      example2.items.push({ message: 'Baz' });
+
       </script>
     </body>
 </html>
